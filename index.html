@@ -415,20 +415,16 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
             </div>
 
-        <!-- Footer -->
-            <footer id="footer">
-                <div class="inner">
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                        <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-                        <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </div>
+            <footer>
+                <p> 
+                    <a href="privacypolicy.html">Privacy Policy</a> |
+                    <a href="tandc.html">Terms & Conditions</a> |
+                    <a href="cookie.html">Cookie Policy</a>
+                </p>
+                <p>Contact: <a href="mailto:your@email.com">your@email.com</a></p>
+                <p>Content © Your Name 2025 | Template © Original Designer</p>
             </footer>
+
 
         <!-- Scripts -->
             <script src="assets/js/jquery.min.js"></script>
@@ -437,6 +433,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+
+            <div id="cookie-popup" style="display: none;">
+                <p>We use cookies to improve your experience. See our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+                <button id="accept-cookies">Accept</button>
+            </div>
+            <script>
+                // Check for cookie consent
+                window.addEventListener("DOMContentLoaded", () => {
+                if (!localStorage.getItem("cookieConsent")) {
+                    document.getElementById("cookie-popup").style.display = "block";
+                }
+
+                document.getElementById("accept-cookies").addEventListener("click", () => {
+                    localStorage.setItem("cookieConsent", "true");
+                    document.getElementById("cookie-popup").style.display = "none";
+                });
+                });
+            </script>
+
+
 
     </body>
 </html>
