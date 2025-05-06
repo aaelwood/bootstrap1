@@ -61,7 +61,7 @@ body {
 }
 
 mark {
-	background-color: transparent;
+	background-color: black;
 	color: black;
 }
 
@@ -103,7 +103,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color :black ;
+		color : black ;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -2385,7 +2385,7 @@ input, select, textarea {
 		}
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: #f7f7f7;
+				background-color: black;
 			}
 
 		table td {
@@ -2524,7 +2524,7 @@ input, select, textarea {
 		.button.primary {
 			background-color: #49bf9d;
 			border-color: #49bf9d;
-			color: #ffffff !important;
+			color: white !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2550,8 +2550,8 @@ input, select, textarea {
 		input[type="button"]:disabled,
 		.button.disabled,
 		.button:disabled {
-			background-color: #e7e7e7 !important;
-			border-color: #e7e7e7 !important;
+			background-color: black !important;
+			border-color: black !important;
 			color: black !important;
 			cursor: default;
 		}
