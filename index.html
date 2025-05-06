@@ -415,15 +415,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
             </div>
 
-            <footer>
-                <p> 
-                    <a href="privacypolicy.html">Privacy Policy</a> |
-                    <a href="tandc.html">Terms & Conditions</a> |
-                    <a href="cookie.html">Cookie Policy</a>
-                </p>
-                <p>Contact: <a href="mailto:your@email.com">your@email.com</a></p>
-                <p>Content © Your Name 2025 | Template © Original Designer</p>
-            </footer>
+            
+                <footer id="footer">
+                    <ul class="copyright">
+                    <li>&copy; Alexis Elwood 2025</li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="tandc.html">Terms & Conditions</a></li>
+                    </ul>
+                </footer>
 
 
         <!-- Scripts -->
@@ -433,27 +432,68 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-
-            <div id="cookie-popup" style="display: none;">
-                <p>We use cookies to improve your experience. See our <a href="cookie-policy.html">Cookie Policy</a>.</p>
-                <button id="accept-cookies">Accept</button>
+            <div id="cookie-popup" style="display: none; position: fixed; bottom: 0; width: 100%; background: #222; color: #fff; padding: 1rem; text-align: center; z-index: 9999;">
+                <p style="margin: 0;">This website uses cookies to ensure you get the best experience. 
+                    <a href="cookie.html" style="color: #4fc3f7;">Learn more</a>
+                </p>
+                <button id="accept-cookies" style="margin-top: 0.5rem; background: #4fc3f7; color: #000; border: none; padding: 0.5rem 1rem; cursor: pointer;">
+                    Got it!
+                </button>
             </div>
             <script>
-                // Check for cookie consent
-                window.addEventListener("DOMContentLoaded", () => {
-                if (!localStorage.getItem("cookieConsent")) {
-                    document.getElementById("cookie-popup").style.display = "block";
+                // Description: This script is used to show a cookie popup on the website
+                
+                // Get the cookie popup element
+                const cookiePopup = document.getElementById("cookie-popup");
+                // Get the accept button
+                const acceptCookies = document.getElementById("accept-cookies");
+                
+                // Function to set a cookie
+                function setCookie(cname, cvalue, exdays) {
+                    const d = new Date();
+                    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+                    const expires = "expires=" + d.toUTCString();
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
                 }
-
-                document.getElementById("accept-cookies").addEventListener("click", () => {
-                    localStorage.setItem("cookieConsent", "true");
-                    document.getElementById("cookie-popup").style.display = "none";
+                
+                // Function to get a cookie value
+                function getCookie(cname) {
+                    const name = cname + "=";
+                    const decodedCookie = decodeURIComponent(document.cookie);
+                    const ca = decodedCookie.split(";");
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) == " ") {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            return c.substring(name.length, c.length);
+                        }
+                    }
+                    return "";
+                }
+                
+                // Function to check if the cookie has been set
+                function checkCookie() {
+                    const cookieAccepted = getCookie("cookieAccepted");
+                    if (cookieAccepted === "") {
+                        // Show the cookie popup
+                        cookiePopup.style.display = "block";
+                    }
+                }
+                
+                // Event listener for the accept button
+                acceptCookies.addEventListener("click", function () {
+                    // Set the cookie
+                    setCookie("cookieAccepted", "true", 30);
+                    // Hide the cookie popup
+                    cookiePopup.style.display = "none";
                 });
-                });
-            </script>
-
-
+                
+                // Call the checkCookie function on page load
+                checkCookie();
+                </script>
+                
 
     </body>
 </html>
-
