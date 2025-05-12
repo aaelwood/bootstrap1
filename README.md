@@ -54,11 +54,14 @@ To view the portfolio website on your own machine:
 
           .gitignore (for version control)
 
-4. Once files are downloaded, use these as a template and add your own information.
-      Start with index.html (this has the master code)
-      Change formatting and colors with style.css
-      Ensure that auxiliary htmls are embedded into index.html
-      Ensure usage of multiple branches and remember to merge with main and push origin
+4. Once files are downloaded, follow these steps:
+
+   - Start with `index.html` (this has the master code)
+   - Change formatting and colors using `style.css`
+   - Ensure that all auxiliary HTML files and CSS files are embedded or linked properly within `index.html`
+   - Use multiple branches for development
+   - Remember to merge changes into `main` and push to `origin`
+
    
 
 
