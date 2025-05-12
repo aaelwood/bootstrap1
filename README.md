@@ -16,8 +16,8 @@ This portfolio site includes several key sections:
 -  **Contact Me**: Includes links to:
   - [LinkedIn](https://www.linkedin.com/in/alexis-elwood-67949a268/)
   - [GitHub](https://github.com/aaelwood)
-         -  Email
-         -  My Resume
+  -  Email
+  -  My Resume
 -  **Coursework**: A list of current and future courses I'm taking.
 -  **Internship Info**: A section highlighting my current internship.
 -  **Career Goals**: Where I see myself heading professionally.
